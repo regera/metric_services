@@ -24,7 +24,7 @@ Access
 ```
 http://localhost:8080/sample 
 ```
-![Alt text](/sample.png?raw=true "Optional Title")
+![Alt text](/sample.png?raw=true "Sample page")
 
 - via REST client using url: 
 ```html
