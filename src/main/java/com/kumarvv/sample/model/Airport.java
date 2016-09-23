@@ -1,10 +1,11 @@
-package com.kumarvv.sample.model;
+package com.tfaucheux.sample.model;
 
 import javax.persistence.*;
 
 /**
  * airport codes
  */
+@Table(name="MDM_AIRPORT")
 @Entity
 public class Airport {
 

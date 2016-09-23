@@ -1,4 +1,4 @@
-package com.kumarvv.sample.model;
+package com.tfaucheux.sample.model;
 
 import org.apache.log4j.Logger;
 

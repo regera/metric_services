@@ -1,4 +1,4 @@
-package com.kumarvv.sample.cdi;
+package com.tfaucheux.sample.cdi;
 
 import org.apache.log4j.Logger;
 

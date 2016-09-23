@@ -9,14 +9,18 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>cdi-resteasy-hibernate-angularjs-tomcat-sample</name>
-	<url>https://github.com/kumarvv</url>
 
-	<repositories>
-		<repository>
-			<id>JBoss repository</id>
-			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-		</repository>
-	</repositories>
+        <repositories>
+                <repository>
+                        <id>JBoss repository</id>
+                        <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+                </repository>
+
+                <repository>
+                        <id>codelds</id>
+                        <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+                </repository>
+        </repositories>
 
 	<dependencies>
 		<!-- servlet -->
@@ -72,11 +76,18 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.3.6.Final</version>
 		</dependency>
+               <dependency>
+                        <groupId>com.oracle</groupId>
+                        <artifactId>ojdbc6</artifactId>
+                        <version>11.2.0.3</version>
+                </dependency>
+<!--
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.32</version>
 		</dependency>
+-->
 
 		<!-- log4j -->
 		<dependency>
@@ -106,13 +117,25 @@
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
+<!--
+                      <plugin>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>tomcat-maven-plugin</artifactId>
+                                <configuration>
+                                        <url>http://valvcshad001vm:8080/manager</url>
+                                        <server>mytomcat</server>
+					<server>local-tomcat-7</server>
+                                        <path>/sample</path>
+                                </configuration>
+                        </plugin>
+-->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<url>http://localhost:8080/manager/text</url>
-					<server>local-tomcat-7</server>
+					<url>http://valvcshad001vm:8080/manager/text</url>
+                                        <server>tomcat-manager</server>
 					<path>/sample</path>
 				</configuration>
 			</plugin>

@@ -1,7 +1,7 @@
-package com.kumarvv.sample.api;
+package com.tfaucheux.sample.api;
 
-import com.kumarvv.sample.model.Airport;
-import com.kumarvv.sample.model.AirportDAO;
+import com.tfaucheux.sample.model.Airport;
+import com.tfaucheux.sample.model.AirportDAO;
 import org.apache.log4j.Logger;
 
 import javax.inject.Inject;

@@ -1,4 +1,4 @@
-package com.kumarvv.sample.api;
+package com.tfaucheux.sample.api;
 
 import javax.ws.rs.core.Application;
 import java.util.HashSet;

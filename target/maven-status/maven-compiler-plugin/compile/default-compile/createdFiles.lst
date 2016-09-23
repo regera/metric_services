@@ -1,0 +1,6 @@
+com/tfaucheux/sample/cdi/CdiResources.class
+com/tfaucheux/sample/api/AirportAPI.class
+com/tfaucheux/sample/model/Airport.class
+com/tfaucheux/sample/api/Utils.class
+com/tfaucheux/sample/api/RestApplication.class
+com/tfaucheux/sample/model/AirportDAO.class
