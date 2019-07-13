@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0"
 	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
-      http://java.sun.com/xml/ns/persistence
-      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
       
-	<persistence-unit name="TestPU" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="MetricsPU" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-                <class>com.tfaucheux.sample.model.Airport</class>
+                <class>com.tfaucheux.sample.model.ImpMetricDaily</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <!-- Database connection settings -->
             <property name="javax.persistence.jdbc.driver"   value="oracle.jdbc.driver.OracleDriver" />
-            <property name="javax.persistence.jdbc.url"      value="jdbc:oracle:thin:@//tdadev_tdadev.val.vlss.local:1521/tdadev.val.vlss.local" />
-            <property name="javax.persistence.jdbc.user"     value="mdm" />
-            <property name="javax.persistence.jdbc.password" value="MDMUSER321" />
+            <property name="javax.persistence.jdbc.url"      value="jdbc:oracle:thin:@//tdaprd_tdaprd.val.vlss.local:1521/tdaprd.val.vlss.local" />
+            <property name="javax.persistence.jdbc.user"     value="TARGETING" />
+            <property name="javax.persistence.jdbc.password" value="TARGETING" />
             <!-- SQL dialect -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
             <!-- hibernate Properties -->
-            <property name="hibernate.default_schema" value="mdm" />
+            <property name="hibernate.default_schema" value="impower" />
             <property name="hibernate.format_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="NONE" />
+           <!-- <property name="hibernate.hbm2ddl.auto" value="validate" /> -->
+            <property name="hibernate.generate_statistics" value="true" />
+            <property name="hibernate.type.descriptor.sql" value="trace" />
             <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.connection.release_mode" value="after_transaction" />
+            <property name="hibernate.connection.release_mode" value="auto" />
+            <property name="hibernate.ejb.entitymanager_factory_name" value="PU_TDAPRD_TARGETING" />
             <!-- Misc. Properties -->
+            <property name="transaction_factory_class" value="org.hibernate.transaction.JDBCTransactionFactory" />
             <property name="oracle.jdbc.useFetchSizeWithLongColumn" value="true" />
             <property name="show_sql" value="true" />
         </properties>
     </persistence-unit>
 </persistence>
+

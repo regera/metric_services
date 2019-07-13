@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="sampleApp">
 <head>
-	<title>sample</title>
+	<title>Graph Columns</title>
 	<link rel="stylesheet" href="css/sample.css">
 
 	<!-- angular-js -->
 	<script src="js/angular.min.js"></script>
-	<script src="js/sample.js"></script>
+	<script src="js/graph_column.js"></script>
 
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,8 +17,8 @@
 <body>
 	<div class="container-fluid" ng-controller="sampleController">
 		<div class="hdr navbar" style="border-radius: 0px 0px 4px 4px;">
-			<div class="col-xs-2 title">Airports</div>
-			<div class="col-xs-10 navbar-right">
+			<div class="col-xs-4 title">METADATA: Columns</div>
+			<div class="col-xs-8 navbar-right">
 				<div class="navbar-form navbar-right" role="search">
 					<div class="form-group">
 						<div class="left-inner-addon">
@@ -27,10 +27,10 @@
 								<input type="text"
 										 style="width: 250px;"
 										 class="form-control"
-										 placeholder="Type here to search airports"
-										 ng-model="searchAirport"
-										 ng-change="searchAirports()" />
-								<button type="submit" class="btn btn-primary" ng-click="newAirportModal()"><span class="glyphicon glyphicon-plus"></span></button>
+										 placeholder="Type Search here (* for wildcard)"
+										 ng-model="searchGraphColumn"
+										 ng-change="searchGraphColumns()" />
+								<button type="submit" class="btn btn-primary" ng-click="newGraphColumnModal()"><span class="glyphicon glyphicon-plus"></span></button>
 							</div>
 						</div>
 					</div>
@@ -40,51 +40,60 @@
 		<div class="body drop-shadow">
 			<ul class="table-row">
 				<div class="row">
-					<span class="col-xs-2 text-primary">CODE</span>
-					<span class="col-xs-5 text-primary">NAME</span>
-					<span class="col-xs-4 text-primary">COUNTRY</span>
-					<span class="col-xs-1">&nbsp;</span>
+					<span class="col-xs-4 text-primary">COLUMN_NAME</span>
+					<span class="col-xs-2 text-primary">SYSTEM_COUNT</span>
+					<span class="col-xs-2 text-primary">OWNER_COUNT</span>
+					<span class="col-xs-2 text-primary">TABLE_COUNT</span>
+					<span class="col-xs-2">&nbsp;</span>
 				</div>
 			</ul>
 			<div class="body-data">
-				<ul ng-repeat="airport in airports" class="table-row">
+				<ul ng-repeat="graphColumn in graphColumns" class="table-row">
 					<div class="row">
-						<span class="col-xs-2 text-info">{{ airport.code }}</span>
-						<span class="col-xs-5 text-info">{{ airport.name }}</span>
-						<span class="col-xs-4 text-info">{{ airport.country }}</span>
-						<span class="col-xs-1">
-							<span class="glyphicon glyphicon-pencil" ng-click="showAirportModal(airport)"></span>
-							<span class="glyphicon glyphicon-remove delete-btn" ng-click="deleteAirportModal(airport)"></span>
+						<span class="col-xs-4 text-info">
+                                                      <!-- <a href="http://valvcshad001vm.val.vlss.local:8080/model_services/api/graphcolumndtls/search/{{ graphColumn.columnName }}" target="_blank">{{ graphColumn.columnName }}</a></span> -->
+                                                      <a href="http://valvcshad001vm.val.vlss.local/model_services/../columndetails/?column={{ graphColumn.columnName }}" target="_blank">{{ graphColumn.columnName }}</a></span>
+						<span class="col-xs-2 text-info">{{ graphColumn.systemCount }}</span>
+						<span class="col-xs-2 text-info">{{ graphColumn.ownerCount }}</span>
+						<span class="col-xs-2 text-info">{{ graphColumn.tableCount }}</span>
+						<span class="col-xs-2">
+							<span class="glyphicon glyphicon-pencil" ng-click="showGraphColumnModal(graphColumn)"></span>
+							<span class="glyphicon glyphicon-remove delete-btn" ng-click="deleteGraphColumnModal(graphColumn)"></span>
 						</span>
 					</div>
 				</ul>
 			</div>
 		</div>
-		<script type="text/ng-template" id="editAirportModal.html">
+		<script type="text/ng-template" id="editGraphColumnModal.html">
 			<div class="modal-header sample-model-hdr">
-			<span ng-show="selectedAirport.id > 0">
-				<h4 class="text-info">edit: <span>{{ selectedAirport.name }}</span></h4>
+			<span ng-show="selectedGraphColumn.columnName > 0">
+				<h4 class="text-info">edit: <span>{{ selectedGraphColumn.columnName }}</span></h4>
 			</span>
-			<span ng-hide="selectedAirport.id > 0">
-				<h4 class="text-info">add: <span>{{ selectedAirport.name }}</span></h4>
+			<span ng-hide="selectedGraphColumn.columnName > 0">
+				<h4 class="text-info">add: <span>{{ selectedGraphColumn.columnName }}</span></h4>
 			</span>
 			</div>
 			<div class="modal-body">
-				<form id="editAirportForm">
+				<form id="editGraphColumnForm">
 					<div class="form-group">
-						<label for="code">Code</label>
-						<input id="code" type="text" class="form-control" placeholder="Code"
-								 ng-model="selectedAirport.code" ng-required="true"/>
+						<label for="columnName">Column_Name</label>
+						<input id="columnName" type="text" class="form-control" placeholder="Column_Name"
+								 ng-model="selectedGraphColumn.columnName" ng-required="true"/>
 					</div>
 					<div class="form-group">
-						<label for="name">Name</label>
-						<input id="name" type="text" class="form-control" placeholder="Name"
-								 ng-model="selectedAirport.name" ng-required="false"/>
+						<label for="systemCount">System_Count</label>
+						<input id="systemCount" type="text" class="form-control" placeholder="System_Count"
+								 ng-model="selectedGraphColumn.systemCount" ng-required="false"/>
 					</div>
 					<div class="form-group">
-						<label for="country">Country</label>
-						<input id="country" type="text" class="form-control" placeholder="Country"
-								 ng-model="selectedAirport.country" ng-required="false"/>
+						<label for="ownerCount">Owner_Count</label>
+						<input id="ownerCount" type="text" class="form-control" placeholder="Owner_Count"
+								 ng-model="selectedGraphColumn.ownerCount" ng-required="false"/>
+					</div>
+					<div class="form-group">
+						<label for="tableCount">Table_Count</label>
+						<input id="tableCount" type="text" class="form-control" placeholder="Table_Count"
+								 ng-model="selectedGraphColumn.tableCount" ng-required="false"/>
 					</div>
 				</form>
 			</div>
@@ -93,12 +102,12 @@
 				<button class="btn btn-info" ng-click="cancel()">Cancel</button>
 			</div>
 		</script>
-		<script type="text/ng-template" id="deleteAirportModal.html">
+		<script type="text/ng-template" id="deleteGraphColumnModal.html">
 			<div class="modal-header vf-model-hdr">
-				<h4 class="text-info">delete: <span>{{ selectedAirport.name }} ({{ selectedAirport.code }})</span></h4>
+				<h4 class="text-info">delete: <span>{{ selectedGraphColumn.columnName }} ({{ selectedGraphColumn.systemCount }})</span></h4>
 			</div>
 			<div class="modal-body">
-				<h5>Do you really want to delete this airport?</h5>
+				<h5>Do you really want to delete this graphColumn?</h5>
 			</div>
 			<div class="modal-footer vf-model-footer">
 				<button class="btn btn-danger" ng-click="ok()">Delete</button>

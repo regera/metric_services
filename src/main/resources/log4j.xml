@@ -11,7 +11,7 @@
 	</appender>
 
 	<category name="com.tfaucheux.sample">
-		<level value="DEBUG"/>
+		<level value="INFO"/>
 	</category>
 
 	<root>

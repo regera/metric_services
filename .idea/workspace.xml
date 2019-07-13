@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c634f82c-5ccb-458a-973c-ca23179df9b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/AudienceInsightAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/ImpMetricDailyAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/RestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/cdi/CdiResources.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/AudienceInsight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/AudienceInsightDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDaily.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDailyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RUNME.sh" beforeDir="false" afterPath="$PROJECT_DIR$/RUNME.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.png" beforeDir="false" afterPath="$PROJECT_DIR$/sample.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/airport.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kumarvv/sample/api/AirportAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kumarvv/sample/api/RestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kumarvv/sample/api/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kumarvv/sample/cdi/CdiResources.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kumarvv/sample/model/Airport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kumarvv/sample/model/AirportDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/sample.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/sample.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/api/AirportAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/api/RestApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/api/RestApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/cdi/CdiResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/cdi/CdiResources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/model/Airport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tfaucheux/sample/model/AirportDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/com/tfaucheux/sample/api/AirportAPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/com/tfaucheux/sample/api/RestApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/com/tfaucheux/sample/api/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/com/tfaucheux/sample/cdi/CdiResources.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/com/tfaucheux/sample/model/Airport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/com/tfaucheux/sample/model/AirportDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/cdi-api-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/commons-codec-1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/commons-io-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/commons-logging-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/guava-13.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/hibernate-commons-annotations-4.0.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/hibernate-core-4.3.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/hibernate-entitymanager-4.3.6.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/httpclient-4.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/httpcore-4.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jackson-annotations-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jackson-core-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jackson-databind-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jackson-jaxrs-base-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jackson-jaxrs-json-provider-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jackson-module-jaxb-annotations-2.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jandex-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/javassist-3.18.1-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jaxrs-api-3.0.8.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-annotations-api_1.1_spec-1.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-classfilewriter-1.0.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-el-api_3.0_spec-1.0.0.Alpha1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/jcip-annotations-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/ojdbc6-11.2.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/resteasy-cdi-3.0.8.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/resteasy-jackson2-provider-3.0.8.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/resteasy-jaxrs-3.0.8.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/weld-api-2.2.SP3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/weld-core-2.2.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/weld-core-impl-2.2.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/weld-core-jsf-2.2.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/weld-servlet-2.2.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/weld-spi-2.2.SP3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/lib/xml-apis-1.0.b2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/css/sample.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/js/angular.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/js/angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/js/angular.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/js/sample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sample/js/ui-bootstrap-tpls-0.11.0.min.js" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDailyDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#30#1" expanded="true" />
+                <element signature="e#0#58#1" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
+                <element signature="e#1048#1049#0" expanded="true" />
+                <element signature="e#0#47#1" expanded="true" />
+                <element signature="e#0#84#1" expanded="true" />
+                <element signature="e#0#102#1" expanded="true" />
+                <element signature="e#0#106#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/ImpMetricDailyAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDaily.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDaily.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/ImpMetricDailyAPI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDailyDAO.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="326" />
+    <option name="y" value="33" />
+    <option name="width" value="1920" />
+    <option name="height" value="1261" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metric-servicese" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metric_services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Valassis/java" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$USER_HOME$/scala/ScalaML" value="1471194690000" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Valassis/scala/tda-reinvention" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c634f82c-5ccb-458a-973c-ca23179df9b0" name="Default Changelist" comment="" />
+      <created>1560873464707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560873464707</updated>
+      <workItem from="1560873466049" duration="3094000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3094000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="326" y="33" width="1920" height="1261" extended-state="1" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="Designer" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Pylint" />
+      <window_info anchor="bottom" id="Messages" weight="0.32903227" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Remote Host" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="CDI" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDaily.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/api/ImpMetricDailyAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tfaucheux/sample/model/ImpMetricDailyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#30#1" expanded="true" />
+            <element signature="e#0#58#1" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#0#47#1" expanded="true" />
+            <element signature="e#0#84#1" expanded="true" />
+            <element signature="e#0#102#1" expanded="true" />
+            <element signature="e#0#106#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

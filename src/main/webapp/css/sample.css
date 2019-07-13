@@ -60,3 +60,33 @@
 .delete-btn {
 	color: red;
 }
+
+section#feature{
+        background:#1caa98;
+        color:#fff;
+        padding:40px;
+        overflow: auto;
+}
+
+section#feature ul li{
+        font-size: 22px;
+        list-style: none;
+        line-height: 2.0em;
+}
+
+section#feature ul{
+        padding:0;
+        margin:0;
+}
+
+section#title-bar{
+        padding:0;
+        margin:0;
+        height:80px;
+        background:#1caa98;
+        color:#fff;
+}
+
+section#title-bar h1{
+        margin-bottom:20px;
+}

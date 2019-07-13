@@ -4,11 +4,11 @@
 			xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>cdi-resteasy-hibernate-angularjs-tomcat-sample</groupId>
-	<artifactId>cdi-resteasy-hibernate-angularjs-tomcat-sample</artifactId>
+	<groupId>metric-services</groupId>
+	<artifactId>metric-servicese</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>cdi-resteasy-hibernate-angularjs-tomcat-sample</name>
+	<name>metric_services</name>
 
         <repositories>
                 <repository>
@@ -66,15 +66,19 @@
 		</dependency>
 
 		<!-- JPA / Hibernate -->
+                <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.5.Final</version>
+			<!-- <version>4.3.6.Final</version> -->
+			<version>4.3.11.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.3.6.Final</version>
+			<!-- <version>4.3.6.Final</version> -->
+			<version>4.3.11.Final</version>
+<!-- 			<version>5.2.7.Final</version>-->
 		</dependency>
                <dependency>
                         <groupId>com.oracle</groupId>
@@ -95,10 +99,15 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+               <dependency>
+    			<groupId>org.apache.commons</groupId>
+    			<artifactId>commons-lang3</artifactId>
+    			<version>3.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>sample</finalName>
+		<finalName>metric_services</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -117,26 +126,14 @@
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
-<!--
-                      <plugin>
-                                <groupId>org.codehaus.mojo</groupId>
-                                <artifactId>tomcat-maven-plugin</artifactId>
-                                <configuration>
-                                        <url>http://valvcshad001vm:8080/manager</url>
-                                        <server>mytomcat</server>
-					<server>local-tomcat-7</server>
-                                        <path>/sample</path>
-                                </configuration>
-                        </plugin>
--->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<url>http://valvcshad001vm:8080/manager/text</url>
+					<url>http://valvcshad001vm/manager/text</url>
                                         <server>tomcat-manager</server>
-					<path>/sample</path>
+					<path>/metric_services</path>
 				</configuration>
 			</plugin>
 		</plugins>
