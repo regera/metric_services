@@ -167,6 +167,7 @@
     </dependencies>
 
     <build>
+
         <finalName>metric_services</finalName>
         <plugins>
             <plugin>
@@ -191,7 +192,9 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <port>8080</port>
+                    <username>user</username>
+                    <password>pass</password>
+                    <url>http://localhost:8080/manager/text</url>
                     <path>/metric_services</path>
                 </configuration>
             </plugin>

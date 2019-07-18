@@ -1,5 +1,6 @@
 FROM tomcat:jdk8-openjdk
 EXPOSE 8080
+COPY ./tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 CMD ["catalina.sh", "run"]
 RUN apt update -y && \
     apt install maven -y && \
