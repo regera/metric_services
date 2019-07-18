@@ -7,7 +7,7 @@ RUN apt update -y && \
     git clone https://github.com/regera/metric_services.git $CATALINA_BASE/webapps
 RUN cd /$CATALINA_BASE/webapps && \
     pwd && \
-    mvn clean install tomcat7:deploy && \
+    mvn clean package tomcat7:deploy && \
     cp ./target/metric_services.war /$CATALINA_BASE/webapps/. && \
     ls -al
 CMD ["catalina.sh","run"]
