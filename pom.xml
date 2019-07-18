@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>metric-services</groupId>
-	<artifactId>metric-servicese</artifactId>
+	<artifactId>metric-services</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>metric_services</name>
