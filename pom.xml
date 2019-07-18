@@ -18,8 +18,63 @@
 
                 <repository>
                         <id>codelds</id>
-                        <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+                        <url>https://code.lds.org/nexus/content/groups/main-repo/</url>
                 </repository>
+
+                <repository>
+                    <id>maven-public</id>
+                    <name>maven-public</name>
+                    <url>http://sa1x-pocarc-d1.hchc.local:8081/repository/maven-public/</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>mapr-releases</id>
+                    <url>http://repository.mapr.com/nexus/content/repositories/releases</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>val-repos</id>
+                    <name>val-repos</name>
+                    <url>http://valvcsscs001vm:8081/nexus/content/groups/val-repos/</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>thirdparty</id>
+                    <name>thirdparty</name>
+                    <url>http://valvcsscs001vm:8081/nexus/content/repositories/thirdparty</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+
         </repositories>
 
 	<dependencies>
