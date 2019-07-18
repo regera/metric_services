@@ -7,4 +7,4 @@ RUN apt update -y && \
     apt install curl -y && \
     git clone https://github.com/regera/metric_services.git $CATALINA_BASE/webapps
 RUN cd /$CATALINA_BASE/webapps && \
-    mvn clean tomcat8:deploy
+    mvn clean tomcat7:deploy
